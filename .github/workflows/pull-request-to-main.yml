@@ -14,7 +14,6 @@ jobs:
         run: |
           chmod +x ./test/unit-tests.sh
           ./test/unit-tests.sh
-        
   integration_testing:
     runs-on: ubuntu-latest
     container: python:3.10.9-slim
@@ -47,7 +46,6 @@ jobs:
           else
           echo "Integration Test PASS"
           fi
-          
   mega_hard_testing:
     needs: [unit_testing, integration_testing]
     runs-on: ubuntu-latest
